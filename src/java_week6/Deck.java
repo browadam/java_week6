@@ -16,8 +16,8 @@ public class Deck extends Card{
 		
 	}
 	
-	public Card draw() {
-		
+	public Card draw(Card card) {
+		return card;
 	}
 	
 	
