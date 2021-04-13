@@ -5,9 +5,17 @@ public class Card {
 	private int value;
 	private String name;
 	
-	public Card (String name, int value) {
-		this.name = setName();
+public Card (String name, int value) {
+	
+	this.name = name;
+	this.value = value;
+		
 	}
+	
+	public void describe() {
+		System.out.println("Card: " + name + "\tValue: " + value);
+	}
+	
 	
 	public int getValue() {
 		return value;
@@ -20,11 +28,8 @@ public class Card {
 	public String getName() {
 		return name;
 	}
-	public void setName() {
+	public void setName(String name) {
 		this.name = name;
 	}
 
-	public void describe() {
-		System.out.println("Card: " + getName() + "\tValue: " + getValue());
-	}
 }
