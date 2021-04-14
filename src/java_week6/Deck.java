@@ -7,17 +7,26 @@ import java.util.Random;
 
 public class Deck{
 
-	int deckSize;
+	private static final int deckSize = 52;
+	private String[] suit = {"Hearts", "Diamonds", "Clubs", "Spades"};
+	private String[] rank = {null, null, "2", "3", "4", "5", "6", "7", "8", "9", "10","Jack", "Queen", "King", "Ace"};
 	
-	List <Card> deck = new ArrayList<Card>() {
+	List <Card> deck = new ArrayList<Card>(); 
 		
-		};
-	
-	public Deck (List<Card> deck) {
-	    deckSize = 52;
-		this.deck = deck;
-		
-	}
+	public Deck () {
+//		this.deck = deck;
+		int index = 0;
+//		while(index <= deckSize) {
+			for(int x = 0; x < 4; x++) {
+			for(int i = 2; i < 15; i++) {
+				String s =suit[x] + " of " + rank[i];
+				Card c = new Card(s, i);
+				deck.add(index, c);
+				index++;
+				}
+//			}
+		}
+	}	
 	
 	public void shuffle(List<Card> list) {
 		
@@ -30,6 +39,5 @@ public class Deck{
 		card.remove(0);
 		return temp;
 	}
-	
 	
 }
