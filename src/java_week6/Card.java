@@ -11,7 +11,9 @@ public Card (String name, int value) {
 	this.value = value;
 		
 	}
-
+public Card () {
+	
+}
 	public void describe() {
 		System.out.println("Card: " + name + "\tValue: " + value);
 	}
